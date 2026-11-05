@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"__HARNESS_ROOT__/hooks/sl-api-check.ps1\"",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}
